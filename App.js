@@ -121,7 +121,7 @@ const App = () => {
                           justifyContent: 'center',
                           alignItems: 'center',
                         }}>
-                        <Text style={{color: 'white'}}>{item.sameId}</Text>
+                        {/* <Text style={{color: 'white'}}>{item.sameId}</Text> */}
                       </View>
                     )}
                   </>

@@ -8,22 +8,22 @@ const App = () => {
   const [totalMoves, setTotalMoves] = useState([]);
   const [items, setItems] = useState(
     [
-      {id: 1, img: require('./img/cat.png'), sameId: 1},
-      {id: 2, img: require('./img/cat.png'), sameId: 1},
-      {id: 3, img: require('./img/dog.png'), sameId: 2},
-      {id: 4, img: require('./img/dog.png'), sameId: 2},
-      {id: 5, img: require('./img/fish.png'), sameId: 3},
-      {id: 6, img: require('./img/fish.png'), sameId: 3},
-      {id: 7, img: require('./img/goat.png'), sameId: 4},
-      {id: 8, img: require('./img/goat.png'), sameId: 4},
-      {id: 9, img: require('./img/monkey.png'), sameId: 5},
-      {id: 10, img: require('./img/monkey.png'), sameId: 5},
-      {id: 11, img: require('./img/human.png'), sameId: 6},
-      {id: 12, img: require('./img/human.png'), sameId: 6},
-      {id: 13, img: require('./img/snake.png'), sameId: 7},
-      {id: 14, img: require('./img/snake.png'), sameId: 7},
-      {id: 15, img: require('./img/tiger.png'), sameId: 8},
-      {id: 16, img: require('./img/tiger.png'), sameId: 8},
+      {id: 1, img: 'A', sameId: 1},
+      {id: 2, img: 'A', sameId: 1},
+      {id: 3, img: 'B', sameId: 2},
+      {id: 4, img: 'B', sameId: 2},
+      {id: 5, img: 'C', sameId: 3},
+      {id: 6, img: 'C', sameId: 3},
+      {id: 7, img: 'D', sameId: 4},
+      {id: 8, img: 'D', sameId: 4},
+      {id: 9, img: 'E', sameId: 5},
+      {id: 10, img: 'E', sameId: 5},
+      {id: 11, img: 'F', sameId: 6},
+      {id: 12, img: 'F', sameId: 6},
+      {id: 13, img: 'G', sameId: 7},
+      {id: 14, img: 'G', sameId: 7},
+      {id: 15, img: 'H', sameId: 8},
+      {id: 16, img: 'H', sameId: 8},
     ].sort(() => Math.random() - 0.5),
   );
 
@@ -100,14 +100,18 @@ const App = () => {
                 ) : (
                   <>
                     {selectedCards.includes(item) ? (
-                      <Image
-                        source={item.img}
+                      <View
                         style={{
                           width: 60,
                           height: 60,
-                          resizeMode: 'contain',
-                        }}
-                      />
+                          backgroundColor: 'white',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                        }}>
+                        <Text style={{fontSize: 20, color: 'black'}}>
+                          {item.img}
+                        </Text>
+                      </View>
                     ) : (
                       <View
                         style={{
@@ -117,7 +121,7 @@ const App = () => {
                           justifyContent: 'center',
                           alignItems: 'center',
                         }}>
-                        {/* <Text style={{color: 'white'}}>{item.sameId}</Text> */}
+                        <Text style={{color: 'white'}}>{item.sameId}</Text>
                       </View>
                     )}
                   </>
@@ -136,22 +140,22 @@ const App = () => {
           setMatchFound([]);
           setItems(
             [
-              {id: 1, img: require('./img/cat.png'), sameId: 1},
-              {id: 2, img: require('./img/cat.png'), sameId: 1},
-              {id: 3, img: require('./img/dog.png'), sameId: 2},
-              {id: 4, img: require('./img/dog.png'), sameId: 2},
-              {id: 5, img: require('./img/fish.png'), sameId: 3},
-              {id: 6, img: require('./img/fish.png'), sameId: 3},
-              {id: 7, img: require('./img/goat.png'), sameId: 4},
-              {id: 8, img: require('./img/goat.png'), sameId: 4},
-              {id: 9, img: require('./img/monkey.png'), sameId: 5},
-              {id: 10, img: require('./img/monkey.png'), sameId: 5},
-              {id: 11, img: require('./img/human.png'), sameId: 6},
-              {id: 12, img: require('./img/human.png'), sameId: 6},
-              {id: 13, img: require('./img/snake.png'), sameId: 7},
-              {id: 14, img: require('./img/snake.png'), sameId: 7},
-              {id: 15, img: require('./img/tiger.png'), sameId: 8},
-              {id: 16, img: require('./img/tiger.png'), sameId: 8},
+              {id: 1, img: 'A', sameId: 1},
+              {id: 2, img: 'A', sameId: 1},
+              {id: 3, img: 'B', sameId: 2},
+              {id: 4, img: 'B', sameId: 2},
+              {id: 5, img: 'C', sameId: 3},
+              {id: 6, img: 'C', sameId: 3},
+              {id: 7, img: 'D', sameId: 4},
+              {id: 8, img: 'D', sameId: 4},
+              {id: 9, img: 'E', sameId: 5},
+              {id: 10, img: 'E', sameId: 5},
+              {id: 11, img: 'F', sameId: 6},
+              {id: 12, img: 'F', sameId: 6},
+              {id: 13, img: 'G', sameId: 7},
+              {id: 14, img: 'G', sameId: 7},
+              {id: 15, img: 'H', sameId: 8},
+              {id: 16, img: 'H', sameId: 8},
             ].sort(() => Math.random() - 0.5),
           );
         }}>
